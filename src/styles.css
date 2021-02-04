@@ -14,9 +14,33 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0,);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .container {
   width: min(90vw, 800px);
   margin: auto;
+}
+/* Links and Buttons ============ */
+a{
+  color: #49aa26;
+  text-decoration: none;
+}
+a:hover{
+  color: #3dd705;
+}
+.button.new {
+  display: inline-block;
+  margin: .8rem
 }
 
 /*Titles=======================*/
@@ -62,6 +86,10 @@ header h1{
 .card h3{
   font-weight: normal;
   font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .card p{
   font-size: 2rem;
