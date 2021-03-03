@@ -116,6 +116,14 @@ const DOM = {
 }
 
 const Utils = {
+  formatAmount(value){
+    value = Number(value) * 100
+  },
+  formatDate(date) {
+    const splittedDate = date.split("-")
+    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+  },
+
   formatCurrency(value) {
     const signal = Number(value) < 0 ? "-" : ""
 
@@ -137,27 +145,47 @@ const Form = {
 
   getValues() {
     return {
-      description: Form.getValues.description,
-      amount: Form.getValues.amount,
-      date: Form.getValues.date,
+      description: Form.description.value,
+      amount: Form.amount.value,
+      date: Form.date.value,
     }
   },
 
   validateFields() {
     const { description, amount, date } = Form.getValues()
-    if ( description.trim() === "" ||
-         amount.trim() === "" ||
-         date.trim() === "") {
-          throw new Error("Por favor preencha todos os campos")
+
+    console.log(description, amount, date)
+    if (description.trim() === "" ||
+      amount.trim() === "" ||
+      date.trim() === "") {
+      throw new Error("Por favor, preencha todos os campos")
 
     }
+  },
+
+  formatValues() {
+    let { description, amount, date } = Form.getValues()
+ 
+    amount = Utils.formatAmount(amount)
+
+    date = Utils.formatDate(date)
+
+    console.log(date)
   },
   submit(event) {
     event.preventDefault()
 
-    Form.validateFields()
+    try {
 
-    Form.formateData()
+      // Form.validateFields()
+
+      Form.formatValues()
+
+    } catch (error) {
+      alert(error.message)
+
+    }
+
   }
 }
 
