@@ -5,7 +5,5 @@
   "repository": "https://github.com/cleitonomariano/myFinances.git",
   "author": "Cleiton Mariano <cleitonomariano@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "surge": "^0.21.7"
-  }
+  "dependencies": {}
 }
