@@ -84,7 +84,9 @@ const DOM = {
       </td>
     </tr>
     `
-    return html
+    return html;
+
+   
   },
   updateBalance() {
     document
@@ -175,6 +177,7 @@ const Form = {
     Form.date.value = ""
 
   },
+  
 
   submit(event) {
     event.preventDefault()
@@ -193,7 +196,51 @@ const Form = {
 
   }
 }
+const html = document.querySelector("html")
+const checkbox = document.querySelector("input[name=theme]")
 
+const getStyle = (element, style) =>
+  window
+    .getComputedStyle(element)
+    .getPropertyValue(style)
+
+const initialColors = {
+  bg: getStyle(html, "--bg"),
+  bgHeader: getStyle(html, "--bg-header"),
+  darkBlue: getStyle(html, "--dark-blue"),
+  green: getStyle(html, "--green"),
+  ligthGreen: getStyle(html, "--ligth-green"),
+  red: getStyle(html, "--red"),
+  colorTextDarkMode: getStyle(html, "--color-text-darkMode"),
+  colorTextDataTable: getStyle(html, "--color-text-dataTable"),
+
+
+}
+const darkMode = {
+  bg: "#333333",
+  bgHeader: "darkBlue",
+  darkBlue: "colorTextDarkMode",
+  // green: 
+  ligthGreen: "#daa520",
+  // red: 
+  colorTextDataTable: "#daa520",
+
+
+}
+const transformKey = key => 
+    "--" + key.replace(/([A-Z])/g, "-$1").toLowerCase()
+
+
+const changeColors = (colors) => {
+    Object.keys(colors).map(key => 
+        html.style.setProperty(transformKey(key), colors[key]) 
+    )
+}
+
+
+checkbox.addEventListener("change", ({target}) => {
+    target.checked ? changeColors(darkMode) : changeColors(initialColors)
+})
 
 
 const App = {
