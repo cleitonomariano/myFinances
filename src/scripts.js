@@ -212,19 +212,20 @@ const initialColors = {
   ligthGreen: getStyle(html, "--ligth-green"),
   red: getStyle(html, "--red"),
   colorTextDarkMode: getStyle(html, "--color-text-darkMode"),
-  colorTextDataTable: getStyle(html, "--color-text-dataTable"),
+  colorTextData: getStyle(html, "--color-text-data"),
+  colorBgCards: getStyle(html, "--color-bg-cards")          
 
 
 }
 const darkMode = {
   bg: "#333333",
-  bgHeader: "darkBlue",
-  darkBlue: "colorTextDarkMode",
-  // green: 
+  bgHeader: "#00008b",
+  darkBlue: "#daa520",
+  green: "#7AD9FF",
   ligthGreen: "#daa520",
-  // red: 
-  colorTextDataTable: "#daa520",
-
+  // red: "daa520",
+  colorTextData: "#daa520 ",
+  colorBgCards: "#A0E4FF"
 
 }
 const transformKey = key => 
