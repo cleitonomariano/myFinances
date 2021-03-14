@@ -4,12 +4,25 @@
   --green: #49aa26;
   --ligth-green: #3dd705;
   --red: #e92929;
-  --color-headings: #daa520;
-  --bg: #fcfcfc;
-  --bg-panel: #ebebeb;
-  --color-text: #333333;
+  --bg: #f0f2f5;
+  --bg-header: #2d4a22;
+  --color-text-data: #969cb3;
+  --color-text-darkMode: #daa520;
+  --color-bg-cards: #ffffff
+
+
 
   }
+/* .darkmode{
+  --dark-blue:#363f5f; 
+  --green: #49aa26;
+  --ligth-green: #3dd705;
+  --red: #e92929;
+  --color-text-darkmode: #daa520;
+  --bg: #f0f2f5;
+  --bg-panel: #ebebeb;
+
+} */
 
 *{
   margin: 0;
@@ -21,7 +34,7 @@ html {
 }
 
 body{
-  background: #f0f2f5;
+  background: var(--bg);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -91,7 +104,7 @@ h2 {
 
 /*header=======================*/
 header{
-  background: #2d4a22;
+  background: var(--bg-header);
   padding: 2rem 0 10rem;
   text-align: center;
 }
@@ -100,7 +113,7 @@ header h1{
 }
 
 #logo {
-  color: #f0f2f5;
+  color: var(--bg);
   font-weight: 100 ;
 }
 /* Balance =========================*/
@@ -108,14 +121,14 @@ header h1{
   margin-top: -8rem;
 }
 #balance h2 {
-  color: white;
+  color: var(--bg);
   margin-top: 0;
 
   }
 /* Cards =========================*/
 
 .card{
-  background: white;
+  background: var(--color-bg-cards);
   padding:  1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
@@ -149,7 +162,7 @@ header h1{
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969cb3;
+  color: var(--color-text-data);
 }
 
 table thead tr th:first-child,
@@ -163,12 +176,16 @@ table tbody tr td:last-child {
 }
 
 table th{
-  background: white;
+  background: var(--color-bg-cards);
 
   text-align: left;
   padding: 1rem 2rem;
-  font-weight: normal;
-  color: #969cb3;
+  font-weight: bold;
+  color: var(--dark-blue);
+  opacity: 0.7
+}
+table thead tr th:hover{
+  opacity: 1;
 }
 
 table tbody tr{
@@ -180,7 +197,7 @@ table tbody tr:hover{
 }
 
 table tbody td{
-  background: white;
+  background: var(--color-bg-cards);
   padding: 1rem 2rem;
 }
 td.description{ 
@@ -211,7 +228,7 @@ td.income{
   visibility: visible;
 }
 .modal{
-  background-color: #f0f2f5;
+  background-color: var(--bg);
   padding: 2.4rem;
   max-width: 500px;
   width: 90%;
@@ -279,7 +296,7 @@ label::after{
   transition: 0.3;
 }
 input:checked + label{
-  background-color: var(--color-headings);
+  background-color: #7AD9FF;
 }
 input:checked + label::after{
   left: calc(100% -5px);
@@ -295,6 +312,11 @@ footer{
   margin: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: 0,6;
+  width: 100%;
+  /* font-weight: bold; */
+}
+footer:hover{
+  color: var(--color-text-darkMode)
 }
 /* Responsive================== */
 @media (min-width: 800px) {
