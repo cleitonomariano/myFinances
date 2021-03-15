@@ -9,7 +9,7 @@
   --color-text-data: #969cb3;
   --color-text-darkMode: #daa520;
   --color-bg-cards: #ffffff;
-  --color-textA: #49aa29;
+  --color-text-a: #49aa29;
 }
 /* .darkmode{
   --dark-blue:#363f5f; 
@@ -55,7 +55,7 @@ body {
 
 /* Links and Buttons ============ */
 a {
-  color: var(--color-textA);
+  color: var(--color-text-a);
   text-decoration: none;
 }
 a:hover {
