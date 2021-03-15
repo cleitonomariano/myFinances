@@ -216,7 +216,7 @@ const initialColors = {
   colorTextDarkMode: getStyle(html, "--color-text-darkMode"),
   colorTextData: getStyle(html, "--color-text-data"),
   colorBgCards: getStyle(html, "--color-bg-cards"),
-  textA: getStyle(html, "--color-textA"),
+  colorTextA: getStyle(html, "--color-text-a"),
 
 }
 
@@ -228,7 +228,7 @@ const darkMode = {
   ligthGreen: "#7AD9FF",
   colorTextData: "white",
   colorBgCards: "#7AD9FF",
-  textA: "white",
+  colorTextA: "#ffffff",
 
 }
 const transformKey = key => 
