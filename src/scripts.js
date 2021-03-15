@@ -229,6 +229,7 @@ const darkMode = {
   colorTextData: "white",
   colorBgCards: "#7AD9FF",
   colorTextA: "#ffffff",
+  red: "#daa520" 
 
 }
 const transformKey = key => 
