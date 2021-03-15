@@ -1,5 +1,5 @@
 /*global================================*/
-:root{
+:root {
   --dark-blue:#363f5f; 
   --green: #49aa26;
   --ligth-green: #3dd705;
@@ -8,11 +8,9 @@
   --bg-header: #2d4a22;
   --color-text-data: #969cb3;
   --color-text-darkMode: #daa520;
-  --color-bg-cards: #ffffff
-
-
-
-  }
+  --color-bg-cards: #ffffff;
+  --color-textA: #49aa26
+}
 /* .darkmode{
   --dark-blue:#363f5f; 
   --green: #49aa26;
@@ -21,19 +19,19 @@
   --color-text-darkmode: #daa520;
   --bg: #f0f2f5;
   --bg-panel: #ebebeb;
-
 } */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 93.5%;
 }
 
-body{
+body {
   background: var(--bg);
   font-family: 'Poppins', sans-serif;
 }
@@ -54,14 +52,16 @@ body{
   width: min(90vw, 800px);
   margin: auto;
 }
+
 /* Links and Buttons ============ */
-a{
-  color: var(--green);
+a {
+  color: var(--color-textA);
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: var(--ligth-green);
 }
+
 button {
   width: 100%;
   height: 50px;
@@ -72,7 +72,7 @@ button {
   border-radius: 0.25rem;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background: var(--ligth-green) ;
 }
 .button.cancel {
@@ -103,12 +103,12 @@ h2 {
 }
 
 /*header=======================*/
-header{
+header {
   background: var(--bg-header);
   padding: 2rem 0 10rem;
   text-align: center;
 }
-header h1{
+header h1 {
  color: var(--dark-blue)
 }
 
@@ -123,18 +123,17 @@ header h1{
 #balance h2 {
   color: var(--bg);
   margin-top: 0;
+}
 
-  }
 /* Cards =========================*/
-
-.card{
+.card {
   background: var(--color-bg-cards);
   padding:  1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
   color: var(--dark-blue);
 }
-.card h3{
+.card h3 {
   font-weight: normal;
   font-size: 1rem;
 
@@ -315,8 +314,8 @@ footer{
   width: 100%;
   /* font-weight: bold; */
 }
-footer:hover{
-  color: var(--color-text-darkMode)
+footer p:hover{
+  color: var(--ligth-green)
 }
 /* Responsive================== */
 @media (min-width: 800px) {

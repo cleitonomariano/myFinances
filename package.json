@@ -1,9 +1,37 @@
 {
   "name": "myfinances",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "repository": "https://github.com/cleitonomariano/myFinances.git",
   "author": "Cleiton Mariano <cleitonomariano@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "prettier-standard": "^16.4.1",
+    "surge": "^0.22.1"
+  },
+  "scripts": {
+    "deploy": "surge -p ./src -d myfinances.surge.sh",
+    "lint": "prettier-standard --format"
+  },
+  "engines": {
+    "node": "^12.21.0"
+  },
+  "prettier": {
+    "jsxSingleQuote": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier-standard --format",
+      "git add"
+    ]
+  }
 }

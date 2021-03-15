@@ -29,6 +29,8 @@ const Transaction = {
     App.reload()
   },
   remove(index) {
+    const confirm = window.confirm("Você tem certeza?")
+    if(!confirm) return
     Transaction.all.splice(index, 1)
     App.reload()
   },
@@ -213,19 +215,20 @@ const initialColors = {
   red: getStyle(html, "--red"),
   colorTextDarkMode: getStyle(html, "--color-text-darkMode"),
   colorTextData: getStyle(html, "--color-text-data"),
-  colorBgCards: getStyle(html, "--color-bg-cards")          
-
+  colorBgCards: getStyle(html, "--color-bg-cards"),
+  textA: getStyle(html, "--color-textA"),
 
 }
+
 const darkMode = {
   bg: "#333333",
   bgHeader: "#00008b",
-  darkBlue: "#daa520",
-  green: "#7AD9FF",
-  ligthGreen: "#daa520",
-  // red: "daa520",
-  colorTextData: "#daa520 ",
-  colorBgCards: "#A0E4FF"
+  darkBlue: "white",
+  green: "blue",
+  ligthGreen: "#7AD9FF",
+  colorTextData: "white",
+  colorBgCards: "#7AD9FF",
+  textA: "white",
 
 }
 const transformKey = key => 
